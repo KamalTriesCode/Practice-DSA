@@ -1,0 +1,50 @@
+!!!! LINK---->https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/practice-problems/algorithm/xsquare-and-double-strings-1/
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int t;
+	cin>>t;
+
+	while(t--)
+	{
+
+
+	map<char,int> m;
+	string g;
+	cin>>g;
+	for(auto &a:m)
+	{
+		a.second=0;
+	}
+	for(int i=0;i<g.size();i++)
+	{
+		m[g[i]]++;
+	}
+
+	// for(int i=0;i<g.size();i++)
+	// {
+	// 	cout<<m[i]<<" ";
+	// }
+
+	string ans="No";
+
+	for(auto &a:m)
+	{
+		// cout<<a.second<<" ";
+
+		if(a.second>=2)
+		{
+			ans="Yes";
+			break;
+		}
+	}
+
+	cout<<ans<<endl;
+}
+}
