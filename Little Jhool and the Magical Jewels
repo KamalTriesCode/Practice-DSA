@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+
+    int n;
+
+    cin >> n;
+
+    while(n--){
+
+        string s;
+
+        cin >> s;
+
+        unordered_map<char, int> mp;
+
+        for(auto i:s){
+
+            mp[i]++;
+
+        }
+
+        int mini = INT_MAX;
+
+        vector<int> temp;
+
+        for(auto i:mp){
+
+            if(i.first == 'r' || i.first == 'u' || i.first == 'b' || i.first == 'y'){
+
+                temp.push_back(i.second);
+
+            }
+
+        }
+
+        for(auto i:temp){
+
+            mini = min(mini, i);
+
+        }
+
+        if(temp.size() < 4){
+
+            mini = 0;
+
+        }
+
+        cout << mini << endl;
+
+    }
+
+}
